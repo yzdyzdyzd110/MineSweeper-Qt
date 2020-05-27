@@ -15,7 +15,7 @@
 #define HOWMANYMINES 15
 extern "C"
 {
-    void RadonBlock(int *randnum );//1到100抽10个随机数
+    void RadonBlock(int *randnum, int mode);//1到100抽10个随机数
     void map_init(struct Block *block, int *minenum); //初始化各方块属性函数
     void itoa(int i,char*string);//linux没有itoa，自己写一个
     int Uncover(struct Block *block,int i);//翻牌子函数，修改选定方块的status属性

@@ -63,7 +63,10 @@ void MainWidget::reset()
 {
     int i;
     int rndNum[HOWMANYMINES];
-    RadonBlock(&rndNum[0]);
+
+    RadonBlock(&rndNum[0], resetMode);
+
+
     map_init(&blocks[0],&rndNum[0]);
     for(i = 0;i < 100; i++ )
     {   btnIndex[i]->setStyleSheet("background-color: rgb(0,245,255)");
@@ -82,6 +85,9 @@ void MainWidget::doClicked(const int &num)
    {
        while ((blocks[num].ismine == MINEIN) | (blocks[num].mines_around != 0))
        {
+
+           resetMode++;
+
            reset();
        }
    }

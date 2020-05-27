@@ -13,11 +13,11 @@
 
 
 
-void RadonBlock(int *randnum )//0到99抽10个随机数
+void RadonBlock(int *randnum, int mode)//0到99抽10个随机数,mode 模式：主程序中保证随机数不重复，解决卡死问题
 {
         int i,j;
         int recur_flag =1;
-        srand((unsigned)time(NULL));
+        srand((unsigned)time(NULL)+ mode);
 
         while (recur_flag )
                 {

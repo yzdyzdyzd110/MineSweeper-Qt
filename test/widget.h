@@ -17,6 +17,7 @@ private:
    QSignalMapper *signalMapper;//左键信号mapper
 public:
    int firstClick;
+   int resetMode = 0;
    QPushButton *resetButton;
    QPushButton *btnIndex[100];
    Block blocks[100];
